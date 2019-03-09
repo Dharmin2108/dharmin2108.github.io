@@ -1,3 +1,8 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
 .container{
     margin:50px;
     display: grid;
@@ -9,7 +14,7 @@ header{
     /*align-content: center;*/
     align-items: center;
     align-content: space-between;
-    box-shadow: 0px 5px 5px lightslategray;
+    box-shadow: 0px 5px 5px -5px lightslategray;
 }
 .menu-bar{
     position: absolute;
@@ -29,61 +34,62 @@ header > img{
 nav{
     margin: 30px 0px;
 }
-.navLinks{
+.nav-links{
     list-style-type: none;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 5px 0px;
 }
-.navLinks > li > a{
+.nav-links > li > a{
     text-decoration: none;
     color:darkslategray;
 }
 .image{
     position: relative;
 }
-.onImage{
+.on-image{
     position: absolute;
     bottom: 0px;
     background: whitesmoke;
     width: 99.9%;
-    height: 175px;
+    height: 130px;
     left:0.5px;;
 }
 .image > img{
     width: 100%;
     height: 450px;
+    object-fit: cover;
 }
-.newsContainer{
+.news-container{
     display: flex;
     flex-direction: column;
 }
-.topNews{
+.top-news{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-.newsBox{
-    box-shadow: 0px 2px 1px lightgrey;
+.news-box{
+     box-shadow: 0px 2px 2px -2px lightgrey; 
     color: grey;
     font-size: 1.2em;
 }
-.topNews>h1{
+.top-news>h1{
     font-weight: normal;
     color: gray;
     margin-bottom: 0px;
 }
-.topNews>p{
+.top-news>p{
     color: gray;
     font-size: 1.5em;
     margin-bottom: 0px;
     margin-right: 12px;
 }
-.tableContainer{
+.table-container{
     margin-top: 30px;
 }
-.scoreTable{
+.score-table{
     width:100%;
     line-height: 3;
     text-align: center;
@@ -91,7 +97,7 @@ nav{
 .winner{
     font-weight: bolder;
 }
-.scoreTable > thead{
+.score-table > thead{
     color: gray;
     opacity: 0.8;
 }
@@ -99,11 +105,11 @@ nav{
     display: flex;
     flex-direction: column;
 }
-.cityName{
+.city-name{
     display: flex;
     flex-direction: column;
 }
-.cityName>p,h3{
+.city-name>p,h3{
     margin: 0px;
 }
 .condition{
@@ -144,16 +150,16 @@ nav{
     margin-right: 20px;
 }
 footer{
-    box-shadow: 0px 3px 6px 3px lightslategray;
+    box-shadow: 0px 5px 5px -4px lightslategray,0px -3px 5px -4px lightslategray;
     margin-top: 30px;
 }
-.footerLinks{
+.footer-links{
     height: 20px;
     display:flex;
     align-items: center;
     list-style-type: none;
 }
-.footerLinks>li>a{
+.footer-links>li>a{
     text-decoration: none;
     padding: 0px 20px;
     color:gray;
@@ -162,7 +168,7 @@ footer{
     .container{
         margin: 0px;
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 60% 40%;
         grid-template-rows: auto auto auto auto auto auto auto;
     }
     header{
@@ -178,10 +184,10 @@ footer{
     .weather{
         grid-area: 3/2/4/3;
     }
-    .newsContainer{
+    .news-container{
         grid-area: 4/1/5/3;
     }
-    .tableContainer{
+    .table-container{
         grid-area: 5/1/6/3;
     }
     .latest-news-container{
@@ -190,7 +196,8 @@ footer{
     footer{
         grid-area: 8/1/9/3;
     }
-    .onImage{
+    .on-image
+    {
         background:rgba(0, 0, 0, 0.5);
         color:white;
         height: 125px;
@@ -199,15 +206,15 @@ footer{
     .image>img{
         height:300px;
     }
-    .scoreTable tbody tr:nth-child(even){
+    .score-table tbody tr:nth-child(even){
         background: lightgray;
     }
-    .scoreTable > thead >tr{
+    .score-table > thead >tr{
         background: rgb(2, 92, 153);
         color:white;
     }
     .forecast-content>img{
-        height: 70px;
+        height: 3em;
     }
     
     .forecast-content{
@@ -215,7 +222,7 @@ footer{
     }
     
 }
-@media(max-width:400px){
+@media(max-width:414px){
     .container{
         display: flex;
         flex-direction: column;
@@ -233,7 +240,7 @@ footer{
         font-size: 1.5em;
         margin-left: 10px;
     }
-    .footerLinks>li>a{
+    .footer-links>li>a{
         font-size: 0.8em;
     }
     header > img{
@@ -241,7 +248,7 @@ footer{
         height: 3em;
     }
     .forecast-content>img{
-        height: 60px;
+        height: 3em;
     }
     .forecast-content{
         width: 100%;
